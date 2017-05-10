@@ -2,7 +2,6 @@
 
    var lastScrollTop = 0;
 
-
    var link=document.getElementsByClassName('link');
    var h1=document.getElementsByTagName('h1');
 //srcoll
@@ -11,7 +10,7 @@ window.addEventListener("scroll", function(){
    if (currentScroll > lastScrollTop){
      document.getElementById("nav-background").style.height ="80px";
      document.getElementById("nav-background").style.paddingTop ="2%";
-     document.getElementById("nav-background").style.transition ="0.5s";
+     document.getElementById("nav-background").style.transition ="0.4s";
      h1[0].style.fontSize= "22px";
    };
    if(currentScroll<=3){
@@ -23,6 +22,23 @@ window.addEventListener("scroll", function(){
    lastScrollTop = currentScroll;
 
 });
+window.addEventListener("scroll", function(){
+  
+     if (this.scrollY > 652){
+     link[0].style.backgroundColor="#18bc9c";
+     link[0].style.backgroundSize="30px;";
+   }else if(this.scrollY <= 1537) {
+     link[0].style.backgroundColor="#2c3e50";
+   };
+
+  /* if (this.scrollY >= 1288) {
+     link[1].style.backgroundColor="#18bc9c"
+   }else {
+     link[1].style.backgroundColor="none";
+   };
+*/
+
+}, false);
 
 
 //IMAGENES
